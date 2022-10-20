@@ -1,0 +1,70 @@
+@import "../../Sass/mixins&var";
+
+
+.card {
+  width: 250px;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 3px 9px -2px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 3px 9px -2px rgba(0, 0, 0, 0.33);
+  transition: all 0.1s linear;
+  @include flex(column , space-between , flex-start , 0);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.imgContainer {
+  width: 100%;
+  height: 250px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.textContainer{
+    padding: 10px;
+    @include flex(column , center , flex-start , 0);
+
+    span{
+        display: inline-block;
+    }
+
+    .category{
+        margin-top: 5px ;
+        color: $hintColor;
+        font-size: 1.3rem;
+    }
+
+    .price{
+        background-color: $secondColor;
+        padding: 8px;
+        border-radius: 3px;
+        margin-top: 16px;
+    }
+}
+
+.btnContainers{
+    width: 100%;
+    padding: 10px;
+    @include flex(row , space-between , center , 0);
+
+    a{
+        font-size: 1.2rem;
+    }
+
+    .plus{
+        width: 30px;
+        height: 25px;
+        border: none;
+        border-radius: 3px;
+        color: $whiteColor;
+        font-size: 1.2rem;
+        background-color: $primaryColor;
+    }
+}

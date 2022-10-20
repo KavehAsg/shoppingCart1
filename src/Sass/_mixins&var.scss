@@ -4,7 +4,7 @@ $primaryColor: #1e88e5;
 $secondColor: #e0f2f1;
 $errorColor: #c62828;
 $errorBackColor: #ffcdd2;
-$borderColor: #e0e0e0;
+$hintColor: #aaa;
 
 @mixin flex($direction, $justify, $align, $gap) {
     display: -webkit-box;
