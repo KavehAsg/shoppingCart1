@@ -31,6 +31,16 @@
     padding: 10px;
     @include flex(column , center , flex-start , 0);
 
+    .title{
+      font-size: 1.2rem;
+      line-clamp: 1;overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+              line-clamp: 2; 
+      -webkit-box-orient: vertical;
+    }
+
     span{
         display: inline-block;
     }
@@ -38,7 +48,6 @@
     .category{
         margin-top: 5px ;
         color: $hintColor;
-        font-size: 1.3rem;
     }
 
     .price{

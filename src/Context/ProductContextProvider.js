@@ -24,4 +24,5 @@ const ProductContextProvider = (props) => {
     );
 }
 
-export default ProductContextProvider;
+export default  ProductContextProvider ;
+export { ProductContext };

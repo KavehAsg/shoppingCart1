@@ -11,7 +11,7 @@ const Card = (props) => {
       </div>
 
       <div className={styled.textContainer}>
-        <h1 className={styled.title}>{title}</h1>
+        <p className={styled.title}>{title}</p>
         <span className={styled.category}>{category}</span>
         <span className={styled.price}>{price}$</span>
       </div>

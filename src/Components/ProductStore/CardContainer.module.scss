@@ -1,3 +1,9 @@
+@import "../../Sass/mixins&var";
+
+
 .cardsContainer{
-    padding: 16px;
+    padding: 26px;
+    @include flex(row , space-around , center , 34px){
+        flex-wrap: wrap;
+    }
 }

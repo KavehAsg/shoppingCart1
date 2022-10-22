@@ -2,12 +2,15 @@ import React from "react";
 import ProductContextProvider from "./Context/ProductContextProvider";
 import Navbar from "./Components/Navbar/Navbar";
 import CardContainer from "./Components/ProductStore/CardContainer";
+import CartReducerContext from "./Context/CartReducerContext";
 
 function App() {
   return (
     <ProductContextProvider>
-      <Navbar />
-      <CardContainer />
+      <CartReducerContext>
+        <Navbar />
+        <CardContainer />
+      </CartReducerContext>
     </ProductContextProvider>
   );
 }
