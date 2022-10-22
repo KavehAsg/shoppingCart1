@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "./Card.module.scss";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
-    const {title , img , price , category } = props;
+    const {title , img , price , category , id} = props;
   return (
     <div  className={styled.card}>
 
@@ -17,7 +18,7 @@ const Card = (props) => {
       </div>
 
         <div className={styled.btnContainers}>
-            <a href="/">details</a>
+            <Link to={`/detailpage/${id}`}>details</Link>
             <div className={styled.counterSection}>
                 <button className={styled.plus}>+</button>
             </div>
