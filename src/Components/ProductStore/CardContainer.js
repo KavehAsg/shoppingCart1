@@ -11,7 +11,7 @@ const CardContainer = () => {
 
     return (
         <div className={styled.cardsContainer}>
-            {products.map((item) => <Card key={item.id} title={item.title} price={item.price} category={item.category} img={item.image} id={item.id} />)}
+            {products.map((product) => <Card key={product.id} productData={product} />)}
         </div>
     );
 };

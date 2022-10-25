@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import { ProductContext } from "../../Context/ProductContextProvider";
 import styled from "./DetailsPage.module.scss";
-import { useParams } from "react-router-dom";
 
 const DetailsPage = () => {
   const params = useParams();
@@ -16,18 +17,15 @@ const DetailsPage = () => {
   });
 
   useEffect(() => {
-    products.forEach((element) => {
-      if (element.id == params.id) {
+    const selectedProduct = products.find((item) => item.id === Number(params.id) );
         setData({
-          title: element.title,
-          description: element.description,
-          price: element.price,
-          category: element.category,
-          imgSrc: element.image,
-          rate: element.rating.rate,
+          title: selectedProduct.title,
+          description: selectedProduct.description,
+          price: selectedProduct.price,
+          category: selectedProduct.category,
+          imgSrc: selectedProduct.image,
+          rate: selectedProduct.rating.rate,
         });
-      };
-    });
   } , [params , products]);
 
   return (

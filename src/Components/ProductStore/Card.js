@@ -1,14 +1,26 @@
-import React from "react";
-import styled from "./Card.module.scss";
+import React , { useContext , useEffect }from "react";
 import { Link } from "react-router-dom";
 
-const Card = (props) => {
-    const {title , img , price , category , id} = props;
+//style 
+import styled from "./Card.module.scss";
+
+//cart Context
+import {ReducerContext} from '../../Context/CartReducerContext';
+
+const Card = ({productData}) => {
+    const {title , image , price , category , id} = productData;
+    
+    const {cartReducer , cartDispatch} = useContext(ReducerContext);
+
+    // useEffect(() => {
+    //   console.log(cartReducer);
+    // } , [cartReducer])
+
   return (
     <div  className={styled.card}>
 
       <div className={styled.imgContainer}>
-        <img alt="img" src={img}></img>
+        <img alt="img" src={image}></img>
       </div>
 
       <div className={styled.textContainer}>
@@ -20,7 +32,7 @@ const Card = (props) => {
         <div className={styled.btnContainers}>
             <Link to={`/detailpage/${id}`}>details</Link>
             <div className={styled.counterSection}>
-                <button className={styled.plus}>+</button>
+                <button className={styled.plus} onClick={() => cartDispatch({type: 'ADD_ITEM' , payLoad: productData })}>{cartReducer.selectedItems.find(item => item.id === id) ? '+' : 'Add to Cart'}</button>
             </div>
         </div>
 

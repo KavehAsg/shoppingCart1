@@ -3,7 +3,7 @@ import { useEffect , useState , createContext } from "react";
 //API
 import { getProduct } from "../Services/API";
 
-const ProductContext = createContext();
+export const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
 
@@ -25,4 +25,3 @@ const ProductContextProvider = (props) => {
 }
 
 export default  ProductContextProvider ;
-export { ProductContext };

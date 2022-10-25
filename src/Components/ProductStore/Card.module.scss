@@ -68,12 +68,14 @@
     }
 
     .plus{
-        width: 30px;
+        padding: 4px;
+        width: fit-content;
         height: 25px;
         border: none;
         border-radius: 3px;
         color: $whiteColor;
-        font-size: 1.2rem;
+        font-size: 1rem;
         background-color: $primaryColor;
+        transition: all 0.3s ease-in-out;
     }
 }
