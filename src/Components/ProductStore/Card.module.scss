@@ -1,6 +1,5 @@
 @import "../../Sass/mixins&var";
 
-
 .card {
   width: 250px;
   height: 450px;
@@ -9,7 +8,7 @@
   -webkit-box-shadow: 0px 3px 9px -2px rgba(0, 0, 0, 0.33);
   box-shadow: 0px 3px 9px -2px rgba(0, 0, 0, 0.33);
   transition: all 0.1s linear;
-  @include flex(column , space-between , flex-start , 0);
+  @include flex(column, space-between, flex-start, 0);
 
   &:hover {
     transform: translateY(-5px);
@@ -24,58 +23,77 @@
     width: 100%;
     height: 100%;
   }
-
 }
 
-.textContainer{
-    padding: 10px;
-    @include flex(column , center , flex-start , 0);
+.textContainer {
+  padding: 10px;
+  @include flex(column, center, flex-start, 0);
 
-    .title{
-      font-size: 1.2rem;
-      line-clamp: 1;overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-              line-clamp: 2; 
-      -webkit-box-orient: vertical;
-    }
+  .title {
+    font-size: 1.2rem;
+    line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 
-    span{
-        display: inline-block;
-    }
+  span {
+    display: inline-block;
+  }
 
-    .category{
-        margin-top: 5px ;
-        color: $hintColor;
-    }
+  .category {
+    margin-top: 5px;
+    color: $hintColor;
+  }
 
-    .price{
-        background-color: $secondColor;
-        padding: 8px;
-        border-radius: 3px;
-        margin-top: 16px;
-    }
+  .price {
+    background-color: $secondColor;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 16px;
+  }
 }
 
-.btnContainers{
-    width: 100%;
-    padding: 10px;
-    @include flex(row , space-between , center , 0);
+.btnContainers {
+  width: 100%;
+  padding: 10px;
+  @include flex(row, space-between, center, 0);
 
-    a{
-        font-size: 1.2rem;
-    }
+  .counterSection {
+    @include flex(row, space-between, center, 12px);
+  }
 
-    .plus{
-        padding: 4px;
-        width: fit-content;
-        height: 25px;
-        border: none;
-        border-radius: 3px;
-        color: $whiteColor;
-        font-size: 1rem;
-        background-color: $primaryColor;
-        transition: all 0.3s ease-in-out;
+  a {
+    font-size: 1.2rem;
+  }
+
+  .addItem {
+    padding: 0 4px;
+    width: fit-content;
+    min-width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    color: $whiteColor;
+    font-size: 1.1rem;
+    background-color: $primaryColor;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .deleteItem {
+    @extend .addItem;
+    padding: 3px 5px !important ;
+
+    img {
+      filter: invert(100%) sepia(6%) saturate(7353%) hue-rotate(309deg)
+        brightness(139%) contrast(126%);
     }
+  }
+
+  .decreaseItem {
+    @extend .addItem;
+  }
 }
