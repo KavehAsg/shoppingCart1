@@ -7,8 +7,6 @@ const CardContainer = () => {
 
     const products = useContext(ProductContext);
     
-
-
     return (
         <div className={styled.cardsContainer}>
             {products.map((product) => <Card key={product.id} productData={product} />)}

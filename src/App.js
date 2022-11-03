@@ -4,7 +4,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import CardContainer from "./Components/ProductStore/CardContainer";
 import CartContextProvider from "./Context/CartReducerContext";
 import DetailsPage from "./Components/DetailsPage/DetailsPage";
-import { Route , Switch} from 'react-router-dom';
+import CartPage from "./Components/CartPage/CartPage";
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <CartContextProvider>
         <Navbar />
         <Switch>
-          <Route path='/detailpage/:id' component={DetailsPage}/> 
-          <Route path='/' component={CardContainer}/>
+          <Route path='/detailpage/:id' component={DetailsPage} />
+          <Route path='/cart' component={CartPage} />
+          <Route path='/' component={CardContainer} />
         </Switch>
       </CartContextProvider>
     </ProductContextProvider>

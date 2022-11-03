@@ -1,0 +1,13 @@
+@import "../../Sass/mixins&var";
+
+.container{
+    padding: 36px;
+    @include flex(row , space-between , flex-start , 0);
+}
+
+.cartContainer{
+    padding: 12px;
+    width: 70%;
+    @include flex(column , space-between , flex-start , 24px);
+    border-right: 1px solid $borderColor;
+}

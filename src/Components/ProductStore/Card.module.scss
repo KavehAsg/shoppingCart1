@@ -61,39 +61,4 @@
   width: 100%;
   padding: 10px;
   @include flex(row, space-between, center, 0);
-
-  .counterSection {
-    @include flex(row, space-between, center, 12px);
-  }
-
-  a {
-    font-size: 1.2rem;
-  }
-
-  .addItem {
-    padding: 0 4px;
-    width: fit-content;
-    min-width: 25px;
-    height: 25px;
-    border: none;
-    border-radius: 3px;
-    color: $whiteColor;
-    font-size: 1.1rem;
-    background-color: $primaryColor;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .deleteItem {
-    @extend .addItem;
-    padding: 3px 5px !important ;
-
-    img {
-      filter: invert(100%) sepia(6%) saturate(7353%) hue-rotate(309deg)
-        brightness(139%) contrast(126%);
-    }
-  }
-
-  .decreaseItem {
-    @extend .addItem;
-  }
 }

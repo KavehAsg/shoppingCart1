@@ -1,5 +1,5 @@
 import React , { useContext } from "react";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //Context
 import { CartContext } from "../../Context/CartReducerContext";
@@ -17,13 +17,13 @@ const Navbar = () => {
   
   return (
     <div className={styled.navbar}>
-      <a href="/" className={styled.productLink}>
+      <Link to="/" className={styled.productLink}>
         products
-      </a>
+      </Link>
       <div className={styled.shopCart}>
-        <a href="/">
+        <Link to="/cart">
           <img alt="cart-pic" src={CartIcon}></img>
-        </a>
+        </Link>
         <span>{cartReducer.totalQuantity}</span>
       </div>
     </div>

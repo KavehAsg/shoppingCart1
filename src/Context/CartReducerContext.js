@@ -27,7 +27,7 @@ const reducer = (state, action) => {
   const { type, payLoad } = action;
   switch (type) {
     case "ADD_ITEM":
-      state.selectedItems =  [...state.selectedItems, { ...payLoad, quantity: 1 }];
+      state.selectedItems = [...state.selectedItems, { ...payLoad, quantity: 1 }];
       return {
         ...state,
         ...sumItems(state.selectedItems),
@@ -61,6 +61,8 @@ const reducer = (state, action) => {
       };
     case "CLEAR_ALL":
       return firstInit;
+    case "CHECK-OUT":
+      return {...state , isCheckedOut: true};
     default:
       return firstInit;
   }

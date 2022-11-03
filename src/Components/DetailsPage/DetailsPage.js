@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
+//Context
 import { ProductContext } from "../../Context/ProductContextProvider";
+
+//style
 import styled from "./DetailsPage.module.scss";
 
 const DetailsPage = () => {
@@ -43,6 +46,7 @@ const DetailsPage = () => {
           <div className={styled.lables}>
             <span>{data.rate}/5 &#11088;</span>
             <span>{data.price}$</span>
+            <Link to='/'>back</Link>
           </div>
         </div>
       </div>
