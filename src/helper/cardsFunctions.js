@@ -7,7 +7,6 @@ export const quantityCounter = (state , id) => {
     if (index === -1){
         return false;
     } else {
-        console.log(`count ${state[index].quantity}`)
         return state[index].quantity;
     }
 }

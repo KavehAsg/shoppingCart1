@@ -23,7 +23,6 @@ const sumItems = (selectedItems) => {
 };
 
 const reducer = (state, action) => {
-  console.log(state)
   const { type, payLoad } = action;
   switch (type) {
     case "ADD_ITEM":
@@ -60,7 +59,12 @@ const reducer = (state, action) => {
         ...sumItems(state.selectedItems),
       };
     case "CLEAR_ALL":
-      return firstInit;
+      return {
+        selectedItems: [],
+        totalQuantity: 0,
+        totalPrice: 0,
+        isCheckedOut: false,
+      };
     case "CHECK-OUT":
       return {...state , isCheckedOut: true};
     default:
