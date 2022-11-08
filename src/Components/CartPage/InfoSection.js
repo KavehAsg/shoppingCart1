@@ -21,7 +21,6 @@ const InfoSection = () => {
             <div className={styled.buttons}>
                 <button onClick={() => cartDispatch({type: "CLEAR_ALL" })}>Clear all</button>
                 <button onClick={() => cartDispatch({type: "CHECK-OUT" })}>Check Out</button>
-                <button onClick={() => console.log(cartReducer)}>Check</button>
             </div>
             <Link to='/'>back to store</Link>
         </div>

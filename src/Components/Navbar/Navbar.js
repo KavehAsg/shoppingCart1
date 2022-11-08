@@ -16,7 +16,7 @@ const Navbar = () => {
   const { cartReducer } = useContext(CartContext);
   
   return (
-    <div className={styled.navbar}>
+    <div className={styled.navbar} >
       <Link to="/" className={styled.productLink}>
         products
       </Link>

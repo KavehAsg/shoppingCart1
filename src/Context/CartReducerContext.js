@@ -6,7 +6,6 @@ const firstInit = {
   selectedItems: [],
   totalQuantity: 0,
   totalPrice: 0,
-  isCheckedOut: false,
 };
 
 const sumItems = (selectedItems) => {
@@ -65,8 +64,6 @@ const reducer = (state, action) => {
         totalPrice: 0,
         isCheckedOut: false,
       };
-    case "CHECK-OUT":
-      return {...state , isCheckedOut: true};
     default:
       return firstInit;
   }
