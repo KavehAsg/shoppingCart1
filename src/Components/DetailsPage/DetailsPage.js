@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams , useHistory } from "react-router-dom";
 
 //Context
 import { ProductContext } from "../../Context/ProductContextProvider";
@@ -7,8 +7,9 @@ import { ProductContext } from "../../Context/ProductContextProvider";
 //style
 import styled from "./DetailsPage.module.scss";
 
-const DetailsPage = () => {
+const DetailsPage = ({handler}) => {
   const params = useParams();
+  const navigate = useHistory();
   const products = useContext(ProductContext);
   const [data, setData] = useState({
     title: "",
@@ -46,7 +47,10 @@ const DetailsPage = () => {
           <div className={styled.lables}>
             <span>{data.rate}/5 &#11088;</span>
             <span>{data.price}$</span>
-            <Link to='/'>back</Link>
+            <div  onClick={() => {
+              navigate.push('/');
+              handler(params.id)
+            }}>back</div>
           </div>
         </div>
       </div>

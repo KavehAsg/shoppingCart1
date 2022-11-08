@@ -1,5 +1,5 @@
 import React , { useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link , useHistory} from 'react-router-dom';
 
 //Context
 import { CartContext } from "../../Context/CartReducerContext";
@@ -14,9 +14,11 @@ import CartIcon from '../../assets/shopIcon.svg';
 const Navbar = () => {
 
   const { cartReducer } = useContext(CartContext);
+
+  const navigate = useHistory();
   
   return (
-    <div className={styled.navbar} >
+    <div className={styled.navbar} onClick={() => navigate.push('/cart')}>
       <Link to="/" className={styled.productLink}>
         products
       </Link>

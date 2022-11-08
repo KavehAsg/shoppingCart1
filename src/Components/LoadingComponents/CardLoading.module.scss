@@ -1,0 +1,48 @@
+@import "../../Sass/mixins&var";
+
+.card {
+    width: 250px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.1s linear;
+    @include flex(column, flex-start, flex-start, 0);
+
+    div {
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+    }
+}
+
+.textContainer {
+    padding: 10px;
+    @include flex(column, center, flex-start, 10px);
+
+    span {
+        width: 180px;
+        height: 15px;
+        border-radius: 5px;
+    }
+}
+
+.loading {
+
+    background-image: linear-gradient(90deg,
+            #EEEEEE 0%, #EEEEEE 40%,
+            #DDDDDD 50%, #DDDDDD 55%,
+            #EEEEEE 65%, #EEEEEE 100%,
+        );
+    background-size: 400%;
+    animation: skeleton 1.5s infinite;
+}
+
+@keyframes skeleton {
+    from {
+        background-position: 100% 100%;
+    }
+
+    to {
+        background-position: 0% 0%;
+    }
+}
