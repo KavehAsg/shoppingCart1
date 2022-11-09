@@ -11,3 +11,18 @@
     @include flex(column , space-between , flex-start , 24px);
     border-right: 1px solid $borderColor;
 }
+
+@media (min-width: 300px) and (max-width: 870px) {
+    .container{
+        padding: 16px;
+        @include flex(column , space-between , center , 32px);
+    }
+
+    .cartContainer{
+        padding: 8px;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid $borderColor;
+    }
+}
+

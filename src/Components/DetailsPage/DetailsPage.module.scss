@@ -1,60 +1,99 @@
 @import "../../Sass/mixins&var";
 
 .detailPage {
-    padding: 28px 56px;
-    
-  .container {
-    @include flex(row, space-between, center, 44px);
-    padding: 24px;
-    border: 1px solid $borderColor;
-    border-radius: 10px;
-  }
+    padding: 46px 56px;
+
+    .container {
+        @include flex(row, space-between, center, 44px);
+        padding: 24px;
+        border: 1px solid $borderColor;
+        border-radius: 10px;
+    }
 }
 
 .imgContainer {
-  img {
-    width: 300px;
-  }
+    img {
+        width: 300px;
+    }
 }
 
-.detailsContainer{
+.detailsContainer {
     border: 1px solid $borderColor;
     padding: 28px;
     border-radius: 10px;
-    @include flex(column , space-between , flex-start ,70px);
+    @include flex(column, space-between, flex-start, 70px);
 }
 
-.texts{
-    @include flex(column , space-between , flex-start , 10px);
+.texts {
+    @include flex(column, space-between, flex-start, 10px);
 
-    .title{
+    .title {
         color: $primaryColor;
     }
 
-    .category{
+    .category {
         color: $hintColor;
     }
 
-    .description{
+    .description {
         margin-top: 24px;
         font-size: 1.2rem;
     }
 }
 
-.lables{
-    span{
+.lables {
+    span {
         display: inline-block;
         margin-right: 18px;
 
-        &:nth-child(2){
+        &:nth-child(2) {
             background-color: $secondColor;
             padding: 8px;
             border-radius: 5px;
         }
 
     }
-    div{
+
+    div {
         text-decoration: underline;
         cursor: pointer;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 870px) {
+
+    .detailPage {
+        padding: 32px 16px;
+        .container {
+            @include flex(column, space-between, center, 44px);
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 481px) {
+    .imgContainer {
+        @include flex(row, center, center, 0);
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .detailsContainer {
+        padding: 18px;
+        border-radius: 10px;
+        @include flex(column, space-between, flex-start, 70px);
+    }
+
+    .texts {
+    
+        .title {
+            font-size: 1.3rem;
+        }
+    
+        .description {
+            margin-top: 14px;
+            font-size: 1rem;
+        }
     }
 }

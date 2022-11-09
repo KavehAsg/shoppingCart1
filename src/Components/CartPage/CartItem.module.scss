@@ -1,25 +1,25 @@
 @import "../../Sass/mixins&var";
 
-.container{
+.container {
     width: 100%;
     padding: 16px;
-    @include flex(row , flex-start , center , 3rem);
+    @include flex(row, flex-start, center, 3rem);
     border: 1px solid $borderColor;
     border-radius: 10px;
 
-    img{
+    img {
         width: 100px;
     }
 }
 
-.detailContainer{
+.detailContainer {
     width: 100%;
-    @include flex(column , space-between , flex-start , 24px);
+    @include flex(column, space-between, flex-start, 24px);
 }
 
-.titles{
+.titles {
 
-    h3{
+    h3 {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -28,15 +28,46 @@
         -webkit-box-orient: vertical;
     }
 
-    span{
+    span {
         display: inline-block;
         margin-top: 5px;
         color: $hintColor;
     }
 }
 
-.shoppingDetails{
+.shoppingDetails {
     width: 100%;
     padding-right: 24px;
-    @include flex(row , space-between , center , 0);
+    @include flex(row, space-between, center, 0);
+}
+
+@media (min-width: 300px) and (max-width: 570px) {
+    .container {
+        padding: 10px;
+        border: 1px solid $borderColor;
+        border-radius: 10px;
+        @include flex(column, space-between, center, 20px);
+
+
+        img {
+            width: 80px;
+        }
+    }
+
+    .titles {
+
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        span {
+            font-size: 0.7rem;
+        }
+    }
+
+    .shoppingDetails {
+        p {
+            font-size: 0.8rem;
+        }
+    }
 }

@@ -1,6 +1,8 @@
 @import "../../Sass/mixins&var";
 
 .container{
+    position: sticky;
+    top: 0;
     width: 30%;
     padding: 16px 24px;
 
@@ -23,5 +25,12 @@
         background-color: $primaryColor;
         color: $whiteColor;
         cursor: pointer;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 870px) {
+    .container{
+        width: 100%;
+        padding: 12px 14px;
     }
 }

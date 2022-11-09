@@ -9,18 +9,12 @@ import { Route, Switch } from 'react-router-dom';
 
 function App() {
 
-  const scrollHandler = (id) =>
-    id.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-
   return (
     <ProductContextProvider>
       <CartContextProvider>
         <Navbar />
         <Switch>
-          <Route path='/detailpage/:id' render={(props) => <DetailsPage handler={scrollHandler} {...props}/>} />
+          <Route path='/detailpage/:id' component={DetailsPage}/>
           <Route path='/cart' component={CartPage} />
           <Route path='/' component={CardContainer} />
         </Switch>

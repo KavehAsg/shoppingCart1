@@ -3,9 +3,6 @@
 .counterSection {
     @include flex(row, space-between, center, 12px);
 
-    a {
-        font-size: 1.2rem;
-    }
 
     button {
         cursor: pointer;
@@ -36,5 +33,20 @@
 
     .decreaseItem {
         @extend .addItem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 570px) {
+    .counterSection {
+    
+        .addItem {
+            font-size: 0.9rem;
+        }
+    
+        .deleteItem {
+            img {
+                width: 12px;
+            }
+        }
     }
 }

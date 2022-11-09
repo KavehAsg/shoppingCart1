@@ -7,4 +7,10 @@ const getProduct = async () => {
     return response.data;
 }
 
-export {getProduct};
+
+const getProductDetail = async (id) => {
+    const response = await axios.get(`${BASE_URL}/products/${id}`);
+    return response.data;
+}
+
+export {getProduct , getProductDetail};

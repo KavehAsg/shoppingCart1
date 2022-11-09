@@ -18,11 +18,11 @@ const Navbar = () => {
   const navigate = useHistory();
   
   return (
-    <div className={styled.navbar} onClick={() => navigate.push('/cart')}>
+    <div className={styled.navbar} >
       <Link to="/" className={styled.productLink}>
         products
       </Link>
-      <div className={styled.shopCart}>
+      <div className={styled.shopCart} onClick={() => navigate.push('/cart')}>
         <Link to="/cart">
           <img alt="cart-pic" src={CartIcon}></img>
         </Link>
