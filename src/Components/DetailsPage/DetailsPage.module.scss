@@ -52,12 +52,12 @@
             border-radius: 5px;
         }
 
+        &:nth-child(3) {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     }
 
-    div {
-        text-decoration: underline;
-        cursor: pointer;
-    }
 }
 
 @media (min-width: 300px) and (max-width: 870px) {

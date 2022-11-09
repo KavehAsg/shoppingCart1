@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 import { getProductDetail } from "../../Services/API";
 
@@ -11,6 +11,7 @@ import styled from "./DetailsPage.module.scss";
 const DetailsPage = () => {
   const params = useParams();
   const [data, setData] = useState({});
+  const navigate = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +37,7 @@ const DetailsPage = () => {
             <div className={styled.lables}>
               <span>{data.rating.rate}/5 &#11088;</span>
               <span>{data.price}$</span>
-              <Link to='/'>back</Link>
+              <span onClick={() => navigate.goBack()}>back</span>
             </div>
           </div>
         </div>

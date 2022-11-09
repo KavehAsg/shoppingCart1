@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 //Component
 import ItemCounter from '../ItemCounter/ItemCounter';
 
@@ -14,7 +16,7 @@ const CartItem = ({productData}) => {
             <img src={image} alt='pic' />
             <div className={styled.detailContainer}>
                 <div className={styled.titles}>
-                    <h3>{title}</h3>
+                    <Link to={`/detailpage/${id}`} >{title}</Link>
                     <span>{category}</span>
                 </div>
                 <div className={styled.shoppingDetails}>

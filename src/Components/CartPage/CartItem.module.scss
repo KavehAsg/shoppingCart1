@@ -19,7 +19,10 @@
 
 .titles {
 
-    h3 {
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $textColor;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
